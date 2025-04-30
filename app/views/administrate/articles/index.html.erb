@@ -1,6 +1,12 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Articles</h1>
+<p>You are logged at: <%= current_admin.email %></p>
+
+<%= link_to destroy_admin_session_path, data: { turbo_method: :delete } do %>
+Fazer Logoff
+<% end %>
+
 
 <div id="articles">
   <% @articles.each do |article| %>
