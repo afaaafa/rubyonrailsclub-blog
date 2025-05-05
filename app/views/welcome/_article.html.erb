@@ -1,7 +1,10 @@
 <div>
   <p>
     <strong>Title:</strong>
-    <%= article.title %>
+    <%= article.title %> |
+    
+    <strong>Date:</strong>
+    <%= l(article.created_at, format: :only_date) %>
   </p>
 </div>
 
